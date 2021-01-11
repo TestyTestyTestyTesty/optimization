@@ -71,7 +71,7 @@ gulp.task('sass', () => {
       .pipe(dependents())
       .pipe(sass())
       .pipe(autoprefixer())
-      //.pipe(minifyCss())
+      .pipe(minifyCss())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(dist_assets_folder + 'css'))
     .pipe(browserSync.stream());
@@ -110,24 +110,21 @@ gulp.task('purgecss', () => {
 })
 
 gulp.task('js', () => {
-  return gulp.src([ src_assets_folder + 'js/**/*.js', '!' + src_assets_folder + 'js/homework/**/*.js' ], { since: gulp.lastRun('js') })
+  return gulp.src([ src_assets_folder + 'js/homework/*.js' ], { since: gulp.lastRun('js') })
     .pipe(plumber())
-    .pipe(webpack({
-      mode: 'production'
+    //.pipe(sourcemaps.init())
+    .pipe(babel({
+      presets: [ '@babel/env' ]
     }))
-    .pipe(sourcemaps.init())
-      .pipe(babel({
-        presets: [ '@babel/env' ]
-      }))
-      .pipe(concat('all.js'))
-      .pipe(uglify())
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(dist_assets_folder + 'js'))
+    //.pipe(concat('all.js'))
+    .pipe(uglify())
+    //.pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest(dist_assets_folder + 'js/homework'))
     .pipe(browserSync.stream());
 });
 
 gulp.task('js-copy', () => {
-  return gulp.src([ src_assets_folder + 'js/homework/**/*' ], { since: gulp.lastRun('js-copy') })
+  return gulp.src([ src_assets_folder + 'js/homework/**/*','!' + src_assets_folder + 'js/homework/*.js' ], { since: gulp.lastRun('js-copy') })
     .pipe(gulp.dest(dist_assets_folder + 'js/homework'))
     .pipe(browserSync.stream());
 });
@@ -135,7 +132,7 @@ gulp.task('js-copy', () => {
 gulp.task('images', () => {
   return gulp.src([ src_assets_folder + 'images/**/*.+(png|jpg|jpeg|gif|svg|ico)' ], { since: gulp.lastRun('images') })
     .pipe(plumber())
-    /*.pipe(imagemin())*/
+    .pipe(imagemin())
     .pipe(gulp.dest(dist_assets_folder + 'images'))
     .pipe(browserSync.stream());
 });
@@ -208,13 +205,13 @@ gulp.task(
   'build', 
   gulp.series(
     'clear', 
-    /*'html-minified'*/ 
-    'html', 
+    'html-minified',
+    /*'html',*/ 
     'sass', 
     'less', 
     'stylus', 
     'js', 
-    'js-copy', 
+    'js-copy',
     'fonts', 
     'videos',
     'extra-files', 
