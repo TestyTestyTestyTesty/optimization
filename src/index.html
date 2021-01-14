@@ -7,24 +7,17 @@
     <meta name="description" content="Web Dev Insider demo page for learning purposes.">
     <meta name="format-detection" content="telephone=no">
     <meta name="robots" content="noindex, nofollow">
-
-    <script>performance.mark('css-start');</script>
-    <link href="/assets/css/homework/app.css" rel="stylesheet">
-    <script>
-      performance.mark('css-end');
-      performance.measure('blocking-styles', 'css-start', 'css-end');
-      let start = performance.getEntriesByType('mark')[0].startTime;
-      let end = performance.getEntriesByType('mark')[1].startTime;
-      console.log(`reading css took ${end - start}  ms`);
-    </script>
-    <link media="none" onload="if(media!='all')media='all'" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-
     <link href="/favicon.ico" rel="icon">
 
+    <link rel="preconnect" href="//use.typekit.net" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="//use.typekit.net/lna1ryl.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link href="/assets/css/homework/app.css" rel="stylesheet">
+    <link media="none" onload="if(media!='all')media='all'" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
   </head>
   <body>
 
