@@ -222,7 +222,7 @@ gulp.task(
   )
 );
 
-gulp.task('dev', gulp.series('html', 'sass', 'less', 'fonts', 'videos', 'extra-files', 'stylus', 'js', 'js-copy'));
+gulp.task('dev', gulp.series('html-minified', 'sass', 'less', 'fonts', 'videos', 'extra-files', 'stylus', 'js', 'js-copy'));
 
 gulp.task('serve', () => {
   return browserSync.init({

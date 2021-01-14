@@ -12,7 +12,7 @@ require(['./main'], function (main) {
 
 
 			    function start_anim() {
-					TweenLite.to('.home-banner__anim', 1, {opacity:1, delay:0.5});
+					TweenLite.to('.home-banner__anim', 1, {opacity:1, delay:0});
 					TweenLite.to('#platform, #pc', 1, {top:'0', ease:Back.easeOut, delay:0.5});
 
 					TweenLite.to('#card-base', 1.1, {top:'-2%', ease:Back.easeOut, delay:0.5});
@@ -57,12 +57,12 @@ require(['./main'], function (main) {
 				    TweenMax.set('#rainbow', {opacity:0, left:'-5%'});
 
 
-					TweenLite.to('.home-banner__content p', 2, {opacity:1, delay:1.6});
-					TweenLite.to('.l-home-banner__3-cols > div', 1, {opacity:1, delay:1.7});
-					TweenLite.to('.home-banner__content .headline-1', 2, {opacity:1, delay:1.1});
+					TweenLite.to('.home-banner__content p', 2, {opacity:1, delay:0});
+					TweenLite.to('.l-home-banner__3-cols > div', 1, {opacity:1, delay:0});
+					TweenLite.to('.home-banner__content .headline-1', 2, {opacity:1, delay:0});
 					TweenLite.to('.home-banner__anim img', 1, {opacity:1});
 					TweenLite.to('.home-banner__content p .btn', 2, {opacity:1, delay:0});
-					TweenLite.to('.l-home-banner .btn--arrow-down', 2, {opacity:1, delay:2});
+					TweenLite.to('.l-home-banner .btn--arrow-down', 2, {opacity:1, delay:0});
 
 
 				    start_anim();

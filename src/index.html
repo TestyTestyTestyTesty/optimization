@@ -8,8 +8,15 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="robots" content="noindex, nofollow">
 
-
+    <script>performance.mark('css-start');</script>
     <link href="/assets/css/homework/app.css" rel="stylesheet">
+    <script>
+      performance.mark('css-end');
+      performance.measure('blocking-styles', 'css-start', 'css-end');
+      let start = performance.getEntriesByType('mark')[0].startTime;
+      let end = performance.getEntriesByType('mark')[1].startTime;
+      console.log(`reading css took ${end - start}  ms`);
+    </script>
     <link media="none" onload="if(media!='all')media='all'" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 
     <link href="/favicon.ico" rel="icon">
@@ -18,23 +25,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="//use.typekit.net/lna1ryl.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
-
-    <script>
-      function measureCRP() {
-          var t = window.performance.timing,
-          start = t.domLoading,
-          interactive = t.domInteractive - t.domLoading,
-          dcl = t.domContentLoadedEventStart - t.domLoading,
-          complete = t.domComplete - t.domLoading;
-
-          console.log('start:', start);
-          console.log('DOM is ready:', interactive, 'ms');
-          console.log('DOM + CSSOM are ready:', dcl, 'ms');
-          console.log('domComplete:', complete, 'ms');
-      }
-  </script>
   </head>
-  <body onload="measureCRP()">
+  <body>
 
     <div class="overlay"></div>
     <div class="search">
@@ -621,7 +613,7 @@
       <div class="l-footer__top">
         <div class="layout">
           <div class="col-15 left">
-            <a title="Home" href="/"><img loading="lazy" src="/assets/images/homework/logo.svg" alt="Web Dev Insider" width="141" height="42"></a>
+            <a title="Home" href="/"><img loading="lazy"src="/assets/images/homework/logo.svg" alt="Web Dev Insider" width="141" height="42"></a>
           </div>
           <div class="col-85 l-footer__top-links right">
             <ul>
@@ -740,7 +732,16 @@
     <!-- // -->
     <script src="/assets/js/homework/vendor/jquery/dist/jquery.min.js"></script>
     <script>var media_url = '/assets/', site_url = '/';$(document).load().scrollTop(0);</script>
+    <script>performance.mark('js-start');</script>
     <script data-main="/assets/js/homework/home" src="/assets/js/homework/vendor/requirejs/require.js"></script>
+    <script>
+      performance.mark('js-end');
+      performance.measure('blocking-scripts', 'js-start', 'js-end');
+      console.log(performance.getEntriesByType('mark'))
+      let startJs = performance.getEntriesByType('mark')[2].startTime;
+      let endJs = performance.getEntriesByType('mark')[3].startTime;
+      console.log(`reading js took ${endJs - startJs}  ms`);
+    </script>
     <script defer src="https://js.stripe.com/v3/"></script>
         <!-- Google Tag Manager -->
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
