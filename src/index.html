@@ -8,16 +8,33 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="robots" content="noindex, nofollow">
     <link href="/favicon.ico" rel="icon">
-
+    <!--preconnect zeby nadac wiekszy priorytet pobieranie-->
     <link rel="preconnect" href="//use.typekit.net" crossorigin>
-    <link rel="preconnect" href="https://unpkg.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="//use.typekit.net/lna1ryl.js"></script>
-    <script>try{Typekit.load();}catch(e){}</script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <!--preload zeby rozgrzac polaczenie-->
+    <link rel="preload" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" crossorigin>
+    <link rel="preload" href="//use.typekit.net/lna1ryl.css" crossorigin>
+    <link rel="preload" href="//use.typekit.net/lna1ryl.css" crossorigin>
+    <!--asynchorniczne wczytanie zasobów-->
+    <link src="//use.typekit.net/lna1ryl.css"
+    rel="stylesheet"
+    media="print"
+    onload="this.media='all'">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" 
+    rel="stylesheet"
+    media="print"
+    onload="this.media='all'">
 
     <link href="/assets/css/homework/app.css" rel="stylesheet">
     <link media="none" onload="if(media!='all')media='all'" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <script>
+      //font loading api ktore sprawdza kiedy fonty sie wczytały
+      document.fonts.ready.then(function(){
+        document.getElementsByTagName("html")[0].classList.add("fonts-loaded")
+      });
+      </script>
   </head>
   <body>
 
