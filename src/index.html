@@ -13,8 +13,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://unpkg.com" crossorigin>
     <!--preload zeby rozgrzac polaczenie-->
+
+    <link rel="preload" href="/assets/images/homework/hero.jpg" crossorigin>
     <link rel="preload" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" crossorigin>
-    <link rel="preload" href="//use.typekit.net/lna1ryl.css" crossorigin>
     <link rel="preload" href="//use.typekit.net/lna1ryl.css" crossorigin>
     <!--asynchorniczne wczytanie zasobów-->
     <link src="//use.typekit.net/lna1ryl.css"
@@ -88,7 +89,7 @@
             <div>
               <div class="item__category item__category--50 l-megamenu__cat"><a title="White papers" href="">White papers</a></div>
               <h2 class="headline-2">Some super interesting resource to download</h2>
-              <p class="small-text"><img loading="lazy" src="/assets/images/homework/post.png" class="l-megamenu__image" alt=""> Just download it and enjoy.
+              <p class="small-text"><img  src="/assets/images/homework/post.png" class="l-megamenu__image" alt=""> Just download it and enjoy.
               </p>
               <p>
                 <a class="btn btn--bg-darkblue btn--border-blue" href="/" title="Download now: Ovum Report - Vodafone in-network call recording">Download now</a>
@@ -123,7 +124,7 @@
             <div>
               <div class="item__category item__category--79 l-megamenu__cat"><a title="eBooks" href="/">eBooks</a></div>
               <h2 class="headline-2">PCI DSS and the contact center</h2>
-              <p class="small-text"><img loading="lazy" src="/assets/images/homework/news-example.jpg" class="l-megamenu__image" alt=""> Some text is here so you are impressed and you will click the button below.
+              <p class="small-text"><img  src="/assets/images/homework/news-example.jpg" class="l-megamenu__image" alt=""> Some text is here so you are impressed and you will click the button below.
               </p>
               <p>
                 <a class="btn btn--bg-darkblue btn--border-blue" href="/2" title="Download now">Download now</a>
@@ -143,7 +144,7 @@
             <div>
               <div class="item__category item__category--50 l-megamenu__cat"><a title="White papers" href="/">White papers</a></div>
               <h2 class="headline-2">Report about mobile payment gateways</h2>
-              <p class="small-text"><img loading="lazy" src="/assets/images/homework/post2.png" class="l-megamenu__image" alt=""> An MNO service that doesn&#39;t require a SIM change
+              <p class="small-text"><img  src="/assets/images/homework/post2.png" class="l-megamenu__image" alt=""> An MNO service that doesn&#39;t require a SIM change
               </p>
               <p>
                 <a class="btn btn--bg-darkblue btn--border-blue" href="/" title="Download now">Download now</a>
@@ -240,7 +241,7 @@
         <div class="layout">
           <h2 class="headline-2">Find out more</h2>
 
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/W9-dlonF1JE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="560" height="315" loading="lazy" data-src="https://www.youtube.com/embed/W9-dlonF1JE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
 
@@ -250,7 +251,7 @@
           <section class="col-25 left">
             <div>
               <figure>
-                <img loading="lazy" src="/assets/images/homework/i/slideshow/pci-compliance-45db.png" width="175" alt="">
+                <img class="lazyload" loading="lazy" data-src="/assets/images/homework/i/slideshow/pci-compliance-45db.png" width="175" height="167" alt="">
               </figure>
               <h2 class="headline-2">PCI<br />
                 Compliance
@@ -264,7 +265,7 @@
           <section class="col-25 left">
             <div>
               <figure>
-                <img loading="lazy" src="/assets/images/homework/i/slideshow/call-recording-4d00.png" width="175" alt="">
+                <img class="lazyload" loading="lazy" data-src="/assets/images/homework/i/slideshow/call-recording-4d00.png" width="175" height="167" alt="">
               </figure>
               <h2 class="headline-2">Voice and data recording solutions
               </h2>
@@ -277,7 +278,7 @@
           <section class="col-25 left">
             <div>
               <figure>
-                <img loading="lazy"  src="/assets/images/homework/i/slideshow/interaction-analytics-4124.png" width="175" alt="">
+                <img loading="lazy" class="lazyload" data-src="/assets/images/homework/i/slideshow/interaction-analytics-4124.png" width="175" height="167" alt="">
               </figure>
               <h2 class="headline-2">Interaction analytics solutions
               </h2>
@@ -290,7 +291,7 @@
           <section class="col-25 left">
             <div>
               <figure>
-                <img loading="lazy" src="/assets/images/homework/i/slideshow/platform-cloud-enabled-f7b0.png" width="175" alt="">
+                <img class="lazyload" loading="lazy" data-src="/assets/images/homework/i/slideshow/platform-cloud-enabled-f7b0.png" width="175" height="167" alt="">
               </figure>
               <h2 class="headline-2">Platform
                 <br><span class="headline-2__smaller"> cloud-enabled solutions</span>
@@ -321,7 +322,7 @@
             <div id="slider-features" class="text text--bg-grey">
               <section>
                 <figure>
-                  <img loading="lazy" src="/assets/images/homework/i/slideshow/slider-capture-0f4c.png" alt="">
+                  <img class="lazyload" loading="lazy" data-src="/assets/images/homework/i/slideshow/slider-capture-0f4c.png" alt="">
                 </figure>
                 <div>
                   <span class="headline-2 blue">Capture</span>
@@ -340,7 +341,7 @@
               </section>
               <section>
                 <figure>
-                  <img loading="lazy" src="/assets/images/homework/i/slideshow/slider-store-c81d.png" alt="">
+                  <img  class="lazyload" loading="lazy" data-src="/assets/images/homework/i/slideshow/slider-store-c81d.png" alt="">
                 </figure>
                 <div>
                   <span class="headline-2 green">Store</span>
@@ -359,7 +360,7 @@
               </section>
               <section>
                 <figure>
-                  <img loading="lazy" src="/assets/images/homework/i/slideshow/slider-analyze-cbfa.png" alt="">
+                  <img class="lazyload" loading="lazy" data-src="/assets/images/homework/i/slideshow/slider-analyze-cbfa.png" alt="">
                 </figure>
                 <div>
                   <span class="headline-2 orange">Analyze</span>
@@ -378,7 +379,7 @@
               </section>
               <section>
                 <figure>
-                  <img loading="lazy" src="/assets/images/homework/i/slideshow/slider-consume-e378.png" alt="">
+                  <img class="lazyload" loading="lazy" data-src="/assets/images/homework/i/slideshow/slider-consume-e378.png" alt="">
                 </figure>
                 <div>
                   <span class="headline-2 red">Consume</span>
@@ -482,7 +483,7 @@
                   </ul>
                 </div>
                 <div class="info-box__product-tour col-35 left">
-                  <img loading="lazy" src="/assets/images/homework/slider-store.png" alt="">
+                  <img src="/assets/images/homework/slider-store.png" alt="">
                   <a class="btn btn--bg-darkblue btn--border-blue popup" href="https://www.youtube.com/watch?v=KCK0PqiJbA0">Product Tour</a>
                 </div>
               </div>
@@ -503,16 +504,16 @@
             </h3>
           </div>
           <ul class="page-section--customers__logos">
-            <li><img loading="lazy" src="/assets/images/homework/i/logos/gallery/viking-135-1246.jpg" alt=""></li>
-            <li><img loading="lazy" src="/assets/images/homework/i/logos/gallery/vodafone-135-1a70.jpg" alt=""></li>
-            <li><img loading="lazy" src="/assets/images/homework/i/logos/gallery/sse-135-4e83.jpg" alt=""></li>
-            <li><img loading="lazy" src="/assets/images/homework/i/logos/gallery/investec-135-6def.jpg" alt=""></li>
-            <li><img loading="lazy" src="/assets/images/homework/i/logos/gallery/cowen-group-135-ef66.jpg" alt=""></li>
-            <li><img loading="lazy" src="/assets/images/homework/i/logos/gallery/gatehouse-bank-135-d82b.jpg" alt=""></li>
-            <li><img loading="lazy" src="/assets/images/homework/i/logos/gallery/bgc-135-bb6b.jpg" alt=""></li>
-            <li><img loading="lazy" src="/assets/images/homework/i/logos/gallery/centrica-135-1f68.jpg" alt=""></li>
-            <li><img loading="lazy" src="/assets/images/homework/i/logos/gallery/itg-1352-5e17.jpg" alt=""></li>
-            <li><img loading="lazy" src="/assets/images/homework/i/logos/gallery/bmo-135-78f7.jpg" alt=""></li>
+            <li><img class="lazyload" loading="lazy" width="246" height="135" data-src="/assets/images/homework/i/logos/gallery/viking-135-1246.jpg" alt=""></li>
+            <li><img class="lazyload" loading="lazy" width="246" height="135" data-src="/assets/images/homework/i/logos/gallery/vodafone-135-1a70.jpg" alt=""></li>
+            <li><img class="lazyload" loading="lazy" width="246" height="135" data-src="/assets/images/homework/i/logos/gallery/sse-135-4e83.jpg" alt=""></li>
+            <li><img class="lazyload" loading="lazy" width="246" height="135" data-src="/assets/images/homework/i/logos/gallery/investec-135-6def.jpg" alt=""></li>
+            <li><img class="lazyload" loading="lazy" width="246" height="135" data-src="/assets/images/homework/i/logos/gallery/cowen-group-135-ef66.jpg" alt=""></li>
+            <li><img class="lazyload" loading="lazy" width="246" height="135" data-src="/assets/images/homework/i/logos/gallery/gatehouse-bank-135-d82b.jpg" alt=""></li>
+            <li><img class="lazyload" loading="lazy" width="246" height="135" data-src="/assets/images/homework/i/logos/gallery/bgc-135-bb6b.jpg" alt=""></li>
+            <li><img class="lazyload" loading="lazy" width="246" height="135" data-src="/assets/images/homework/i/logos/gallery/centrica-135-1f68.jpg" alt=""></li>
+            <li><img class="lazyload" loading="lazy" width="246" height="135" data-src="/assets/images/homework/i/logos/gallery/itg-1352-5e17.jpg" alt=""></li>
+            <li><img class="lazyload" loading="lazy" width="246" height="135" data-src="/assets/images/homework/i/logos/gallery/bmo-135-78f7.jpg" alt=""></li>
           </ul>
           <div class="text text--bg-blue page-section--customers__learn">
             <p>
@@ -538,7 +539,7 @@
                       <h6 class="headline-7"><a href="/">Some event that happened on 2014 Amsterdam, Netherlands</a></h6>
                     </header>
                     <figure>
-                      <img loading="lazy" src="/assets/images/homework/post3.png" alt="">
+                      <img class="lazyload" loading="lazy" data-src="/assets/images/homework/post3.png" alt="">
                     </figure>
                     <p class="small-text">
                       Cum sociis natoque penatibus et ultrices volutpat. Nullam wisi ultricies a, gravida vitae, dapibus risus ante sodales lectus blandit eu, tempor diam pede cursus vitae, ultricies eu, faucibus quis, porttitor eros cursus lectus, pellentesque eget, bibendum a, gravida ullamcorper quam.
@@ -555,7 +556,7 @@
                       <h6 class="headline-7"><a href="/">Council Community Meeting 9-11 2014 Florida USA</a></h6>
                     </header>
                     <figure>
-                      <img loading="lazy" src="/assets/images/homework/post4.png" alt="">
+                      <img class="lazyload" loading="lazy" data-src="/assets/images/homework/post4.png" alt="">
                     </figure>
                     <p class="small-text">
                       Cum sociis natoque penatibus et ultrices volutpat. Nullam wisi ultricies a, gravida vitae, dapibus risus ante sodales lectus blandit eu, tempor diam pede cursus vitae, ultricies eu, faucibus quis, porttitor eros cursus lectus, pellentesque eget, bibendum a, gravida ullamcorper quam.
@@ -572,7 +573,7 @@
                       <h6 class="headline-7"><a href="">European Community Meeting Maritim Hotel Berlin October 7-9, 2014  Berlin, Germany</a></h6>
                     </header>
                     <figure>
-                      <img loading="lazy" src="/assets/images/homework/post5.png" alt="">
+                      <img class="lazyload" loading="lazy" data-src="/assets/images/homework/post5.png" alt="">
                     </figure>
                     <p class="small-text">
                       Cum sociis natoque penatibus et ultrices volutpat. Nullam wisi ultricies a, gravida vitae, dapibus risus ante sodales lectus blandit eu, tempor diam pede cursus vitae, ultricies eu, faucibus quis, porttitor eros cursus lectus, pellentesque eget, bibendum a, gravida ullamcorper quam.
@@ -623,7 +624,7 @@
       <div class="l-footer__top">
         <div class="layout">
           <div class="col-15 left">
-            <a title="Home" href="/"><img loading="lazy"src="/assets/images/homework/logo.svg" alt="Web Dev Insider" width="141" height="42"></a>
+            <a title="Home" href="/"><img class="lazyload" loading="lazy" data-src="/assets/images/homework/logo.svg" alt="Web Dev Insider" width="141" height="42"></a>
           </div>
           <div class="col-85 l-footer__top-links right">
             <ul>
@@ -742,16 +743,23 @@
     <!-- // -->
     <script src="/assets/js/homework/vendor/jquery/dist/jquery.min.js"></script>
     <script>var media_url = '/assets/', site_url = '/';$(document).load().scrollTop(0);</script>
-    <script>performance.mark('js-start');</script>
+
     <script data-main="/assets/js/homework/home" src="/assets/js/homework/vendor/requirejs/require.js"></script>
     <script>
-      performance.mark('js-end');
-      performance.measure('blocking-scripts', 'js-start', 'js-end');
-      console.log(performance.getEntriesByType('mark'))
-      let startJs = performance.getEntriesByType('mark')[2].startTime;
-      let endJs = performance.getEntriesByType('mark')[3].startTime;
-      console.log(`reading js took ${endJs - startJs}  ms`);
-    </script>
+          if ('loading' in HTMLImageElement.prototype) {
+              const resources = document.querySelectorAll("[loading]");
+              console.log('native lazy loading');
+              resources.forEach(function(resource) {
+                  resource.src = resource.dataset.src;
+              });
+          } else {
+              console.log('lazy loading thru lazysizes')
+              let script = document.createElement("script");
+              script.async = true;
+              script.src = "/assets/js/homework/vendor/lazysizes.min.js";
+              document.body.appendChild(script)
+          }
+      </script>
     <script defer src="https://js.stripe.com/v3/"></script>
         <!-- Google Tag Manager -->
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
