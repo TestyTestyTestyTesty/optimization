@@ -155,9 +155,12 @@
       </div>
     </div>
 
-    <header
-      class="l-home-banner"
-      style="background-image: url('/assets/images/homework/hero.jpg')">
+    <header class="l-home-banner">
+      <picture class="l-home-banner__bg">
+          <source srcset="/assets/images/homework/hero-desktop.jpg" media="(min-width: 1020px)">
+          <source srcset="/assets/images/homework/hero-tablet.jpg" media="(min-width: 600px)">
+          <img src="/assets/images/homework/hero-mobile.jpg" alt="MDN">
+      </picture>
       <div class="layout">
         <div class="home-banner__content text">
           <h1 class="headline-1">Seamless<br> payment option</h1>
