@@ -466,8 +466,14 @@ define(['components/domReady', 'components/flexbox_fallback', 'components/placeh
 			  });
 			});
 		},
+		parallax: function() {
+			window.addEventListener('scroll', ()=>{
+				let parallax = document.querySelector('.parallaxBg');
+				parallax.style.transform = `translate3d(0px,${(-window.scrollY/15)}px,0px`;
+			})
+		}
 	};
-
+	
 
   	return {
       	init: function() {
@@ -483,6 +489,7 @@ define(['components/domReady', 'components/flexbox_fallback', 'components/placeh
 			global.paymentForms();
 			global.animations();
 			global.ctaAds();
+			global.parallax();
 
       		if ($(".inner-page__submenu--sticky").length)
       		{
@@ -491,7 +498,7 @@ define(['components/domReady', 'components/flexbox_fallback', 'components/placeh
 
       		global.hash_urls();
 
-
+			
           	$('a[rel="external"]').attr('target', '_blank');
           	$('.page-col__contact-btn .btn').on('click', function() {
           		global.scrollToID('#map');

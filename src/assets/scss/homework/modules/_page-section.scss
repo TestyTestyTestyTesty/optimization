@@ -348,14 +348,19 @@
 
 	.page-section--customers {
 		padding-bottom: 2em;
-
-		background-color: #0c8abd;
-		background-position: top center;
-		background-attachment: fixed;
-		background-size: cover;
-
 		text-align: center;
+		position:relative;
+		&__bg{
+			position:absolute;
+			width:100%;
+			height:100%;
+			top:0;
+			left:0;
+			overflow:hidden;
+			img{
 
+			}
+		}
 		.text__bg-blue p {
 			max-width: 1120px;
 			margin: 0 auto;
