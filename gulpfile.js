@@ -104,7 +104,8 @@ gulp.task('stylus', () => {
 gulp.task('purgecss', () => {
   return gulp.src(dist_assets_folder + 'css/**/*.css')
       .pipe(purgecss({
-        content: [dist_folder + '*.html']
+        content: [dist_folder + '*.html', dist_assets_folder + 'js/**/*.js' ],
+        safelist: ['mfp-preloader','mfp-content','mfp-container', 'mfp-s-ready', 'mfp-iframe-holder','overlay',',mfp-wrap', 'mfp-gallery', 'mfp-close-btn-in', 'mfp-auto-cursor', 'mfp-ready','mfp-bg']
       }))
       .pipe(gulp.dest(dist_assets_folder + 'css'))
 })
@@ -215,7 +216,7 @@ gulp.task(
     'fonts', 
     'videos',
     'extra-files', 
-    //'images', 
+    'images', 
     'purgecss',
     /*'generate-critical-css',*/
     'generate-service-worker'
