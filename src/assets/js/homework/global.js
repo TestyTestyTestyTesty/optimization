@@ -489,7 +489,7 @@ define(['components/domReady', 'components/flexbox_fallback', 'components/placeh
 			global.paymentForms();
 			global.animations();
 			global.ctaAds();
-			global.parallax();
+			//global.parallax();
 
       		if ($(".inner-page__submenu--sticky").length)
       		{
