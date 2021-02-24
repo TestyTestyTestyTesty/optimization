@@ -28,13 +28,7 @@
     media="print"
     onload="this.media='all'">
 
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-TGDSWZ8');</script>
-      <!-- End Google Tag Manager -->
+
 
     <link href="/assets/css/homework/app.css" rel="stylesheet">
     <link media="none" onload="if(media!='all')media='all'" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
@@ -195,8 +189,8 @@
 
     <header class="l-home-banner">
       <picture class="l-home-banner__bg">
-          <source srcset="https://ik.imagekit.io/k5xxxcs0ct2/images/hero-desktop.jpg" media="(min-width: 1020px)">
-          <source srcset="https://ik.imagekit.io/k5xxxcs0ct2/images/hero-tablet.jpg" media="(min-width: 600px)">
+          <source data-srcset="https://ik.imagekit.io/k5xxxcs0ct2/images/hero-desktop.jpg" media="(min-width: 1020px)">
+          <source data-srcset="https://ik.imagekit.io/k5xxxcs0ct2/images/hero-tablet.jpg" media="(min-width: 600px)">
           <img style="background-color:#103955;" src="https://ik.imagekit.io/k5xxxcs0ct2/images/hero-mobile.jpg" alt="MDN">
       </picture>
       <div class="layout">
@@ -353,6 +347,11 @@
       </div>
       <!-- section with slider -->
       <div class="page-section page-section--bg-dark">
+        <picture class="bg">
+          <source srcset="https://ik.imagekit.io/k5xxxcs0ct2/images/bg-sec-dark-circles-desktop.jpg" media="(min-width: 1020px)">
+          <source srcset="https://ik.imagekit.io/k5xxxcs0ct2/images/bg-sec-dark-circles-tablet.jpg" media="(min-width: 600px)">
+          <img style="background-color:#131213;" class="lazyload" loading="lazy" data-src="https://ik.imagekit.io/k5xxxcs0ct2/images/bg-sec-dark-circles-mobile.jpg" alt="MDN">
+      </picture>
         <div class="slider-full-width" id="slider">
           <div class="layout2">
             <!-- custom buttons prev/next -->
@@ -454,6 +453,9 @@
       <!-- // -->
       <!-- advantages boxes -->
       <div class="page-section page-section--network page-section--triangle-black text">
+        <div class="bg">
+          <img class="lazyload" loading="lazy" data-src="https://ik.imagekit.io/k5xxxcs0ct2/images/bg-sec-fixed-network.png" alt="MDN">
+      </div>
         <div class="layout">
           <section class="col-33 left">
             <div>
@@ -493,6 +495,9 @@
       <!-- // -->
       <!-- text sextion -->
       <article class="page-section page-section--home-light-bg">
+        <div class="bg">
+          <img class="lazyload" loading="lazy" data-src="https://ik.imagekit.io/k5xxxcs0ct2/images/bg-sec-grey-grid.png" alt="MDN">
+        </div>
         <div class="layout3">
           <div class="text">
             <h4 class="headline-6">Bold. Secure. The best.</h4>
@@ -788,7 +793,13 @@
     <!-- // -->
     <script src="/assets/js/homework/vendor/jquery/dist/jquery.min.js"></script>
     <script>var media_url = '/assets/', site_url = '/';$(document).load().scrollTop(0);</script>
-
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-TGDSWZ8');</script>
+      <!-- End Google Tag Manager -->
     <script data-main="/assets/js/homework/home" src="/assets/js/homework/vendor/requirejs/require.js"></script>
     <script>
           if ('loading' in HTMLImageElement.prototype) {

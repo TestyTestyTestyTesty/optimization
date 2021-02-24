@@ -508,6 +508,7 @@ define(['components/domReady', 'components/flexbox_fallback', 'components/placeh
 
           	/* buttons span */
           	$('.btn').wrapInner('<span />');
+			  
       	}
   	};
   

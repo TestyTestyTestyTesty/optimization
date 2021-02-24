@@ -34,8 +34,8 @@
 		@include flexbox();
 
 		.left {
-			background: url(/assets/images/homework/bg-box-grad-blue.jpg) center right no-repeat;
-			background-size: cover;
+			background: rgb(50,182,231);
+background: radial-gradient(circle, rgba(50,182,231,1) 0%, rgba(54,151,206,1) 25%, rgba(20,146,197,1) 48%, rgba(3,146,204,1) 66%, rgba(14,130,203,1) 83%);
 
 			> * {
 				margin: 20px;

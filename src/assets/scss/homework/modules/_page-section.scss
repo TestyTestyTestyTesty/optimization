@@ -275,8 +275,20 @@
 
 
 	.page-section--bg-dark {
-		background: #131213 url(/assets/images/homework/bg-sec-dark-circles.png) top center repeat-x;
-
+		position: relative;
+		.bg{
+			position: absolute;
+			width:100%;
+			height:100%;
+			left: 0;
+			top: 0;
+			img{
+				width:100%;
+				height:100% !important;
+				opacity:1;
+				object-fit:cover;
+			}
+		}
 		.text {
 			@extend .text--bg-grey;
 		}
@@ -289,12 +301,22 @@
 		text-align: center;
 		color: #fff;
 		text-shadow: 0px 1px 1px rgba(0, 0, 0, .5);
-
-		background:
-			url(/assets/images/homework/bg-sec-fixed-network.png) bottom center no-repeat,
-			url(/assets/images/homework/bg-sec-grad-blue.svg) center center no-repeat;
-		background-size: auto auto, cover;
-
+		position: relative;
+		.bg{
+			background: rgb(10,32,54);
+			background: linear-gradient(61deg, rgba(10,32,54,1) 0%, rgba(24,82,107,1) 25%, rgba(28,105,144,1) 48%, rgba(5,137,192,1) 66%, rgba(5,137,192,1) 83%, rgba(29,112,202,1) 94%);
+			position: absolute;
+			width:100%;
+			height:100%;
+			left: 0;
+			top: 0;
+			img{
+				width:100%;
+				height:100% !important;
+				opacity:1;
+				object-fit:none;
+			}
+		}
 		//background-attachment: fixed;
 
 		.headline-2 {
@@ -311,9 +333,24 @@
 
 
 	.page-section--home-light-bg {
-		background: #f7f7f7 url(/assets/images/homework/bg-sec-grey-grid.png) top center no-repeat;
+		background: #f7f7f7;
 		color: #999;
-
+		position: relative;
+		z-index: 2;
+		.bg{
+			position: absolute;
+			width:100%;
+			height:100%;
+			left: 0;
+			top: 0;
+			z-index: -1;
+			img{
+				width:100%;
+				height:100% !important;
+				opacity:1;
+				object-fit:none;
+			}
+		}
 		.headline-6,
 		.layout3 .text > p {
 			text-align: center;
