@@ -8,6 +8,14 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="robots" content="noindex, nofollow">
     <link href="/favicon.ico" rel="icon">
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TGDSWZ8');</script>
+    <!-- End Google Tag Manager -->
+
     <!--preconnect zeby nadac wiekszy priorytet pobieranie-->
     <link rel="preconnect" href="//use.typekit.net" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,7 +35,7 @@
     onload="this.media='all'">
 
 
-
+    <script defer data-main="/assets/js/homework/home" src="/assets/js/homework/vendor/requirejs/require.js"></script>
     <link href="/assets/css/homework/app.css" rel="stylesheet">
     <link href="/assets/css/homework/a.tailwind.css" rel="stylesheet">
     
@@ -788,47 +796,29 @@
           </div>
         </div>
       </div>
+      <div class="chat-icon">
+        <svg id="chat-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800"><path d="M400 26.2c-193.3 0-350 156.7-350 350 0 136.2 77.9 254.3 191.5 312.1 15.4 8.1 31.4 15.1 48.1 20.8l-16.5 63.5c-2 7.8 5.4 14.7 13 12.1l229.8-77.6c14.6-5.3 28.8-11.6 42.4-18.7C672 630.6 750 512.5 750 376.2c0-193.3-156.7-350-350-350zm211.1 510.7c-10.8 26.5-41.9 77.2-121.5 77.2-79.9 0-110.9-51-121.6-77.4-2.8-6.8 5-13.4 13.8-11.8 76.2 13.7 147.7 13 215.3.3 8.9-1.8 16.8 4.8 14 11.7z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+      </div>
     </footer>
     <!-- // -->
     <script src="/assets/js/homework/vendor/jquery/dist/jquery.min.js"></script>
-    <script>var media_url = '/assets/', site_url = '/';$(document).load().scrollTop(0);</script>
-    <!-- Google Tag Manager -->
-    <!--<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-TGDSWZ8');</script>-->
-      <!-- End Google Tag Manager -->
-    <script data-main="/assets/js/homework/home" src="/assets/js/homework/vendor/requirejs/require.js"></script>
+    <script defer>var media_url = '/assets/', site_url = '/';$(document).load().scrollTop(0);</script>
     <script>
-          if ('loading' in HTMLImageElement.prototype) {
-              const resources = document.querySelectorAll("[loading]");
-              console.log('native lazy loading');
-              resources.forEach(function(resource) {
-                  resource.src = resource.dataset.src;
-              });
-          } else {
-              console.log('lazy loading thru lazysizes')
-              let script = document.createElement("script");
-              script.async = true;
-              script.src = "/assets/js/homework/vendor/lazysizes.min.js";
-              document.body.appendChild(script)
-          }
-      </script>
-    <script defer src="https://js.stripe.com/v3/"></script>
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-      var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-      (function(){
-      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-      s1.async=true;
-      s1.src='https://embed.tawk.to/5fc2ba00920fc91564cb9b3c/default';
-      s1.charset='UTF-8';
-      s1.setAttribute('crossorigin','*');
-      s0.parentNode.insertBefore(s1,s0);
-      })();
+      if ('loading' in HTMLImageElement.prototype) {
+          const resources = document.querySelectorAll("[loading]");
+          console.log('native lazy loading');
+          resources.forEach(function(resource) {
+              resource.src = resource.dataset.src;
+          });
+      } else {
+          console.log('lazy loading thru lazysizes')
+          let script = document.createElement("script");
+          script.async = true;
+          script.src = "/assets/js/homework/vendor/lazysizes.min.js";
+          document.body.appendChild(script)
+      }
     </script>
-    <!--End of Tawk.to Script-->
+    <script defer src="https://js.stripe.com/v3/"></script>
     <!-- Google Tag Manager (noscript) -->
    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TGDSWZ8"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

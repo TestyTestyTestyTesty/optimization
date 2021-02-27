@@ -471,6 +471,21 @@ define(['components/domReady', 'components/flexbox_fallback', 'components/placeh
 				let parallax = document.querySelector('.parallaxBg');
 				parallax.style.transform = `translate3d(0px,${(-window.scrollY/15)}px,0px`;
 			})
+		},
+		loadChat: function() {
+			const chat = document.querySelector('.chat-icon')
+			chat.addEventListener('click',()=>{
+				chat.innerHTML = "..."
+				var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+				(function(){
+				var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+				s1.id="tawkTo";
+				s1.src='https://embed.tawk.to/5fc2ba00920fc91564cb9b3c/default';
+				s1.charset='UTF-8';
+				s1.setAttribute('crossorigin','*');
+				s0.parentNode.insertBefore(s1,s0);
+				})();
+			})
 		}
 	};
 	
@@ -490,6 +505,7 @@ define(['components/domReady', 'components/flexbox_fallback', 'components/placeh
 			global.animations();
 			global.ctaAds();
 			//global.parallax();
+			global.loadChat();
 
       		if ($(".inner-page__submenu--sticky").length)
       		{
