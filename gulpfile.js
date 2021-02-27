@@ -22,8 +22,6 @@ const gulp                      = require('gulp'),
       sourcemaps                = require('gulp-sourcemaps'),
       plumber                   = require('gulp-plumber'),
       sass                      = require('gulp-sass'),
-      less                      = require('gulp-less'),
-      stylus                    = require('gulp-stylus'),
       autoprefixer              = require('gulp-autoprefixer'),
       minifyCss                 = require('gulp-clean-css'),
       babel                     = require('gulp-babel'),
@@ -38,7 +36,8 @@ const gulp                      = require('gulp'),
       path                      = require('path'),
       critical                  = require('critical'),
       purgecss                  = require('gulp-purgecss'),
-
+      postcss                   = require('gulp-postcss'),
+      tailwindcss               = require('tailwindcss'); 
       src_folder                = './src/',
       src_assets_folder         = src_folder + 'assets/',
       dist_folder               = './dist/',
@@ -70,30 +69,19 @@ gulp.task('sass', () => {
       .pipe(plumber())
       .pipe(dependents())
       .pipe(sass())
-      .pipe(autoprefixer())
-      .pipe(minifyCss())
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(dist_assets_folder + 'css'))
-    .pipe(browserSync.stream());
-});
-
-gulp.task('less', () => {
-  return gulp.src([ src_assets_folder + 'less/**/!(_)*.less'], { since: gulp.lastRun('less') })
-    .pipe(sourcemaps.init())
-      .pipe(plumber())
-      .pipe(less())
-      .pipe(autoprefixer())
-      .pipe(minifyCss())
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(dist_assets_folder + 'css'))
-    .pipe(browserSync.stream());
-});
-
-gulp.task('stylus', () => {
-  return gulp.src([ src_assets_folder + 'stylus/**/!(_)*.styl'], { since: gulp.lastRun('stylus') })
-    .pipe(sourcemaps.init())
-      .pipe(plumber())
-      .pipe(stylus())
+      .pipe(postcss([
+        tailwindcss({
+          content: ['./src/**/*.html'],
+          darkMode: false, // or 'media' or 'class'
+          theme: {
+            extend: {},
+          },
+          variants: {
+            extend: {},
+          },
+          plugins: [],
+        })
+      ]))
       .pipe(autoprefixer())
       .pipe(minifyCss())
     .pipe(sourcemaps.write('.'))
@@ -133,7 +121,7 @@ gulp.task('js-copy', () => {
 gulp.task('images', () => {
   return gulp.src([ src_assets_folder + 'images/**/*.+(png|jpg|jpeg|gif|svg|ico)' ], { since: gulp.lastRun('images') })
     .pipe(plumber())
-    .pipe(imagemin())
+    //.pipe(imagemin())
     .pipe(gulp.dest(dist_assets_folder + 'images'))
     .pipe(browserSync.stream());
 });
@@ -209,8 +197,6 @@ gulp.task(
     'html-minified',
     /*'html',*/ 
     'sass', 
-    'less', 
-    'stylus', 
     'js', 
     'js-copy',
     'fonts', 
@@ -223,7 +209,7 @@ gulp.task(
   )
 );
 
-gulp.task('dev', gulp.series('html-minified', 'sass', 'less', 'fonts', 'videos', 'extra-files', 'stylus', 'js', 'js-copy'));
+gulp.task('dev', gulp.series('html-minified', 'sass', 'fonts', 'videos', 'extra-files', 'js', 'js-copy'));
 
 gulp.task('serve', () => {
   return browserSync.init({

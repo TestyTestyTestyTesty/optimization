@@ -15,7 +15,6 @@
     <!--preload zeby rozgrzac polaczenie-->
 
     <link rel="preload" href="https://ik.imagekit.io/k5xxxcs0ct2/images/" crossorigin>
-    <link rel="preload" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" crossorigin>
     <link rel="preload" href="//use.typekit.net/lna1ryl.css" crossorigin>
     <!--asynchorniczne wczytanie zasobów-->
     <link src="//use.typekit.net/lna1ryl.css"
@@ -31,7 +30,8 @@
 
 
     <link href="/assets/css/homework/app.css" rel="stylesheet">
-    <link media="none" onload="if(media!='all')media='all'" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="/assets/css/homework/a.tailwind.css" rel="stylesheet">
+    
     <script>
       //font loading api ktore sprawdza kiedy fonty sie wczytały
       document.fonts.ready.then(function(){
@@ -189,8 +189,8 @@
 
     <header class="l-home-banner">
       <picture class="l-home-banner__bg">
-          <source data-srcset="https://ik.imagekit.io/k5xxxcs0ct2/images/hero-desktop.jpg" media="(min-width: 1020px)">
-          <source data-srcset="https://ik.imagekit.io/k5xxxcs0ct2/images/hero-tablet.jpg" media="(min-width: 600px)">
+          <source srcset="https://ik.imagekit.io/k5xxxcs0ct2/images/hero-desktop.jpg" media="(min-width: 1020px)">
+          <source srcset="https://ik.imagekit.io/k5xxxcs0ct2/images/hero-tablet.jpg" media="(min-width: 600px)">
           <img style="background-color:#103955;" src="https://ik.imagekit.io/k5xxxcs0ct2/images/hero-mobile.jpg" alt="MDN">
       </picture>
       <div class="layout">
@@ -791,8 +791,8 @@
       </div>
     </footer>
     <!-- // -->
-    <!--<script src="/assets/js/homework/vendor/jquery/dist/jquery.min.js"></script>
-    <script>var media_url = '/assets/', site_url = '/';$(document).load().scrollTop(0);</script>-->
+    <script src="/assets/js/homework/vendor/jquery/dist/jquery.min.js"></script>
+    <script>var media_url = '/assets/', site_url = '/';$(document).load().scrollTop(0);</script>
     <!-- Google Tag Manager -->
     <!--<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -800,8 +800,8 @@
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-TGDSWZ8');</script>-->
       <!-- End Google Tag Manager -->
-    <!--<script data-main="/assets/js/homework/home" src="/assets/js/homework/vendor/requirejs/require.js"></script>-->
-   <!-- <script>
+    <script data-main="/assets/js/homework/home" src="/assets/js/homework/vendor/requirejs/require.js"></script>
+    <script>
           if ('loading' in HTMLImageElement.prototype) {
               const resources = document.querySelectorAll("[loading]");
               console.log('native lazy loading');
@@ -816,9 +816,9 @@
               document.body.appendChild(script)
           }
       </script>
-    <script defer src="https://js.stripe.com/v3/"></script>-->
+    <script defer src="https://js.stripe.com/v3/"></script>
     <!--Start of Tawk.to Script-->
-    <!--<script type="text/javascript">
+    <script type="text/javascript">
       var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
       (function(){
       var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
@@ -828,11 +828,11 @@
       s1.setAttribute('crossorigin','*');
       s0.parentNode.insertBefore(s1,s0);
       })();
-    </script>-->
+    </script>
     <!--End of Tawk.to Script-->
     <!-- Google Tag Manager (noscript) -->
-   <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TGDSWZ8"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>-->
+   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TGDSWZ8"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
   </body>
 </html>
