@@ -203,7 +203,7 @@ gulp.task(
     'videos',
     'extra-files', 
     'images', 
-    //'purgecss',
+    'purgecss',
     /*'generate-critical-css',*/
     'generate-service-worker'
   )
