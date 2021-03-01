@@ -22,7 +22,6 @@
             
             function executeScripts() {
                 var fscripts = document.querySelectorAll('fscript');
-                console.log(fscripts);
                 [].forEach.call(fscripts, function(fscript) {
                     var script = document.createElement('script');
                     script.type = 'text/javascript';
@@ -867,7 +866,7 @@
           document.body.appendChild(script)
       }
     </script>
-    <!--<script defer src="https://js.stripe.com/v3/"></script>-->
+    <fscript defer src="https://js.stripe.com/v3/"></fscript>
     <!-- Google Tag Manager (noscript) -->
    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TGDSWZ8"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
