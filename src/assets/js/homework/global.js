@@ -468,6 +468,27 @@ define(['components/domReady', 'components/flexbox_fallback', 'components/placeh
 			
 
 		},
+		loadChat: function(){
+			const chat = document.querySelector('.chat-icon');
+			chat.addEventListener('click',function(e) {
+				chat.innerHTML = "loading";
+				var Tawk_LoadStart=new Date();
+				var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+				s1.async=true;
+				s1.src='https://embed.tawk.to/5fc2ba00920fc91564cb9b3c/default';
+				s1.charset='UTF-8';
+				s1.setAttribute('crossorigin','*');
+				s1.onload = () => {
+					let checker = setInterval(()=>{
+						if(window.Tawk_API && window.Tawk_API.getStatus() != undefined){
+							window.Tawk_API.maximize();
+							clearInterval(checker);
+						};
+					},100)
+				}
+				s0.parentNode.insertBefore(s1,s0);
+			}, {once: true});
+		},
 		parallax: function() {
 			window.addEventListener('scroll', ()=>{
 				let parallax = document.querySelector('.parallaxBg');
@@ -492,7 +513,7 @@ define(['components/domReady', 'components/flexbox_fallback', 'components/placeh
 			global.animations();
 			global.ctaAds();
 			//global.parallax();
-			//global.loadChat();
+			global.loadChat();
 
       		if ($(".inner-page__submenu--sticky").length)
       		{
