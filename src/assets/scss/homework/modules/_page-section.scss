@@ -39,10 +39,24 @@
 
 	.page-section--video {
 		text-align: center;
-
-		iframe {
-			display: inline-block;
+		.youtube-placeholder{
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			position: relative;
+			min-height: 315px;
 			max-width: 100%;
+			img{
+				position: absolute;
+				cursor:pointer;
+				z-index: 1;
+			}
+			iframe {
+				position: absolute;
+				display: inline-block;
+				max-width: 100%;
+				z-index: -1;
+			}
 		}
 	}
 

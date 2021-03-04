@@ -489,6 +489,15 @@ define(['components/domReady', 'components/flexbox_fallback', 'components/placeh
 				s0.parentNode.insertBefore(s1,s0);
 			}, {once: true});
 		},
+		loadYoutube: function(){
+			let youtubePlaceholder = document.querySelector('.youtube-placeholder img')
+			let youtubeIframe = document.querySelector('.youtube-placeholder iframe')
+			youtubePlaceholder.addEventListener('click',function(){
+				youtubeIframe.style.zIndex = 1;
+				youtubeIframe.src = youtubeIframe.dataset.src;
+				youtubePlaceholder.remove();
+			})
+		},
 		parallax: function() {
 			window.addEventListener('scroll', ()=>{
 				let parallax = document.querySelector('.parallaxBg');
@@ -514,7 +523,7 @@ define(['components/domReady', 'components/flexbox_fallback', 'components/placeh
 			global.ctaAds();
 			//global.parallax();
 			global.loadChat();
-
+			global.loadYoutube();
       		if ($(".inner-page__submenu--sticky").length)
       		{
       			global.sticky_submenu();
